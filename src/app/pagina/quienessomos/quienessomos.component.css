@@ -1,0 +1,23 @@
+.container-tit{
+
+    text-align: center;
+}
+
+.imagen{
+    float: inline-end;
+}
+
+.container-t{
+    margin:40px;
+    background-color:#96AC60;
+}
+
+
+.image{
+    float: inline-start;
+    margin: 20px;
+}
+
+.a{
+    text-align: center;
+}

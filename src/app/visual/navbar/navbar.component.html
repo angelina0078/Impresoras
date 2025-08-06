@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom">
+  <div class="container">
+
+    <!--comienza inicio-->
+<div class="loguito">
+  <a [routerLink]="['/inicio']" ><img src="/assets/logo-removebg-preview.png"></a>
+</div>
+
+
+<!--termina inicio-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-grow-1 justify-content-between">
+          
+          <li class="nav-item"><a class="nav-link" href="/producto">productos</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="/promos">promos</a></li>
+          <li class=nav-item><a class="nav-link" [routerLink]="['/contacto']">contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="/quienessomos">sobre nosotros</a></li>
+
+
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/favorito']" aria-label="Cart">
+              <i class="fa-regular fa-bookmark"></i>
+            </a></li>
+
+            <li class="nav-item">
+            <a class="carrito" [routerLink]="['/carrito']" aria-label="Aperture">
+             <i class="fa fa-shopping-cart"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link"  [routerLink]="['/iniciar']"><i class="fa-solid fa-user"></i></a>
+         </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <label for="toggle" id="label_toggle"><a class="nav-link"><i class="fa-solid fa-moon"></i></a></label>
+  <input type="checkbox" id="toggle" (click)="cambiarFondo()">
+</nav>
