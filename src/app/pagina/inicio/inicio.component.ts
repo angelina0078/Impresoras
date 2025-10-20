@@ -1,10 +1,9 @@
-import { CommonModule, NgFor } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-inicio',
-  imports: [CommonModule,NgFor],
+  imports: [CommonModule],
   templateUrl: './inicio.component.html',
   styleUrls:[ './inicio.component.css'],
   standalone:true

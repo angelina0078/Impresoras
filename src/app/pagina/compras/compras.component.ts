@@ -65,7 +65,7 @@ export class ComprasComponent implements OnInit {
 
 
   }
-  //prepara los datos para l a factura con cliente, productos, totales y fecha
+  //prepara los datos para la factura con cliente, productos, totales y fecha
   emitirFactura(): void {
     const datosCliente = this.formularioCompra.value;//datos ingresados en el formulario
     const productos = this.carritoService.obtenerProductos();//productos del carrito
