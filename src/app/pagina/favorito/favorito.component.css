@@ -8,9 +8,6 @@
   padding: 20px;
 }
 
-.ss{
-  background-color: rgb(139, 169, 137);
-}
 /*Efecto hover de las tarjetas*/
 .car:hover {
   transform: scale(1.05);
@@ -36,7 +33,7 @@
 
 .btn:hover {
   color: #000;
-  background-color: rgb(177, 201, 132);
+  background-color: rgb(255, 255, 255);
 }
 /*responsibidad en pantallas chicas*/
 @media (max-width: 600px) {

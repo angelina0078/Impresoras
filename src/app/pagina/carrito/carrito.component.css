@@ -1,10 +1,14 @@
+/*fondo pantalla*/
+body {
+  background-color: white;
+}
 /*fondo del cuadro de carrito*/
 th, td{
-    background-color: rgb(83, 150, 88);
+    background-color:#EBF9FF;
 }
 /*color letras*/
 h1, p{
-  color:whitesmoke;
+  color:#000000;
 }
 
 /* From Uiverse.io by vinodjangid07 */ 

@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { InicioComponent } from './pagina/inicio/inicio.component';
+import { inicioComponent } from './pagina/inicio/inicio.component';
 import { ProductosComponent } from './pagina/productos/productos.component';
 import { ContactoComponent } from './pagina/contacto/contacto.component';
 import { CarritoComponent } from './pagina/carrito/carrito.component';
@@ -13,7 +13,7 @@ import { IniciarComponent } from './visual/iniciar/iniciar.component';
 export const routes: Routes = [
     {path:'', redirectTo:'/inicio', pathMatch: 'full'},
 
-    {path:'inicio',component:InicioComponent},
+    {path:'inicio',component:inicioComponent},
 
     {path:'contacto',component:ContactoComponent},
     

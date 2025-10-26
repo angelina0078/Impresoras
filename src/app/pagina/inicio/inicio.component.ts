@@ -1,13 +1,20 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Producto } from '../../model/producto.model';
+
 
 @Component({
   selector: 'app-inicio',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './inicio.component.html',
-  styleUrls:[ './inicio.component.css'],
-  standalone:true
+  styleUrl: './inicio.component.css'
 })
-export class InicioComponent {
+export class inicioComponent {
+
+Productos : Producto [] = [
+    
+  ]
 
 }

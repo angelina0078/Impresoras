@@ -1,5 +1,14 @@
 
-
+p {
+  border: 100px;
+  text-align: center;
+  color: white;
+  text-shadow:
+    -5px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+}
 /* Elimina los márgenes y rellenos por defecto del navegador */
 body, html {
     margin: 0;
@@ -119,73 +128,82 @@ body, html {
   overflow: hidden;
 }
 .home img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
-.home-front {
-  bottom: 16px;
-  left: 0;
+/* Contenedor del texto principal */
+.home-front,
+.home-back {
   position: absolute;
   width: 100%;
   text-align: center;
-  transition: transform 4s cubic-bezier(0.685, 0.135, 0.15, 0.86);
-  box-shadow: o 3.5px rgb(60, 60, 60);
+  z-index: 1;
   color: #ffffff;
   text-shadow:
     -2px -2px 0 black,
      2px -2px 0 black,
     -2px  2px 0 black,
      2px  2px 0 black;
- 
+  transition: transform 1s ease;
+}
+
+/* Posición inicial */
+.home-front {
+  transform: translateX(0);
 }
 
 .home-back {
-  transform: translateX(200%);
-  color: #ffffff;
-  text-shadow:
-    -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black;
- 
-  transition: transform 4s cubic-bezier(1, 0.335, 0.05, 0.56);
-  box-shadow: o 6px rgb(60, 60, 60);
-  
+  transform: translateX(100%);
 }
 
-/*Text*/
-.title {
-  font-size: 3.9rem;
-  font-weight: bold;
-  margin: -270px;
-}
-/*Text divider*/
-.title::after {
-  display: block;
-  width: 50%;
-  
-
-  height: 10px;
-  margin: 2px auto;
-  background-color: #1b1b1b;
-}
-
-/*Hover*/
-.home:hover {
-  background-color: #1b1b1b25;
-}
-
+/* Hover: animación */
 .home:hover .home-front {
   transform: translateX(-100%);
 }
 
 .home:hover .home-back {
   transform: translateX(0);
-  position: absolute;
-  font-size: 1.9rem;
+}
+
+/* Texto principal */
+.title, .linea-con-titulo {
+  color: white !important;
+   text-shadow:
+    -6px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0; /* quito margen negativo */
+}
+
+/*lineas en el texto de ofertas*/
+.linea-con-titulo {
+  display: flex;
+  align-items: center;
   text-align: center;
-  margin: 230px 300px;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.linea-con-titulo::before,
+.linea-con-titulo::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #aaa;
+}
+
+.linea-con-titulo:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.linea-con-titulo:not(:empty)::after {
+  margin-left: 10px;
 }

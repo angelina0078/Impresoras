@@ -1,8 +1,16 @@
 .u{
-    background-color: #586e26;
+    background-color:#3D4C55;
     color:black;
 
 }
 .c {
     color:black;
 }
+
+footer a {
+    text-decoration: none; /* Saca el subrayado */
+    color: inherit; /* Mantiene el color del texto */
+  }
+  footer a:hover {
+    text-decoration: underline; /* (Opcional) lo subraya solo al pasar el mouse */
+  }

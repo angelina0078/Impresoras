@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Producto } from '../../model/producto.model';
-import { CommonModule } from '@angular/common';
+import { CommonModule, getLocaleMonthNames } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FavoritoService } from '../../servicios/favorito.service';
@@ -8,7 +9,7 @@ import { FavoritoService } from '../../servicios/favorito.service';
 
 @Component({
   selector: 'app-productos',
-  imports: [CommonModule, RouterModule,],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.css'
 })
@@ -22,6 +23,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/car.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"carne",
+      marca:"el mas grande",
     },
     {
       id: 2,
@@ -31,6 +34,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/ver.webp',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"verduras",
+      marca:"el mas grande",
     },
     {
       id: 3,
@@ -40,6 +45,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/hum.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"verduras",
+      marca:"el mas grande",
     },
     {
       id: 4,
@@ -49,6 +56,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/pol.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"pollo",
+      marca:"el mas grande",
     },
     {
       id: 5,
@@ -58,6 +67,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/jyq.avif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"clasicas",
+      marca:"el mas grande",
     },
     {
       id: 6,
@@ -67,6 +78,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/qyc.webp',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"verduras",
+      marca:"el mas grande",
     },
     {
       id: 7,
@@ -76,6 +89,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/capre.webp',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"verduras",
+      marca:"el mas grande",
     },
     {
       id: 8,
@@ -85,6 +100,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/eyr.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"verduras",
+      marca:"el mas grande",
     },
     {
       id: 9,
@@ -94,6 +111,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/ayh.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"carne",
+      marca:"el mas grande",
     },
     {
       id: 10,
@@ -103,6 +122,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/cyq.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"verduras",
+      marca:"el mas grande",
     },
     {
       id: 11,
@@ -112,6 +133,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/syq.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"carne",
+      marca:"el mas grande",
     },
     {
       id: 12,
@@ -121,6 +144,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/qayn.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"vegetarianas",
+      marca:"el mas grande",
     },
     {
       id: 13,
@@ -130,15 +155,19 @@ export class ProductosComponent {
       imagen: '/assets/emp/memb.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 14,
-      nombre: 'bondiola desmechada BBQ',
-      descripcion: 'cerdo jugoso con salsa barbacoa',
+      nombre: 'morcilla con manzana ',
+      descripcion: 'morcilla  acompañada de manzana',
       precio: 1000,
-      imagen: '/assets/emp/bdbbq.jfif',
+      imagen: '/assets/emp/mym.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 15,
@@ -148,6 +177,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/ccyc.webp',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 15,
@@ -157,6 +188,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/jqym.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 17,
@@ -166,6 +199,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/pcc.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 18,
@@ -175,6 +210,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/myhr.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 19,
@@ -184,6 +221,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/cyr.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 20,
@@ -193,6 +232,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/cyp.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 21,
@@ -202,6 +243,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/ccym.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 22,
@@ -211,6 +254,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/pyq.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 23,
@@ -220,6 +265,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/lac.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 24,
@@ -229,6 +276,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/t-m.webp',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 25,
@@ -238,6 +287,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/cp.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 26,
@@ -247,6 +298,8 @@ export class ProductosComponent {
       imagen: '/assets/emp/bayqf.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 27,
@@ -256,34 +309,43 @@ export class ProductosComponent {
       imagen: '/assets/emp/qtyj.jpg',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
     {
       id: 28,
+      nombre: 'dulce de leche y banana',
+      descripcion: 'dulce de leche y banana caramelizada',
+      precio: 1000,
+      imagen: '/assets/emp/ddlyb.avif',
+      disponibilidad: true,
+      cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
+    },
+   
+   /* {
+      {
+      id: 14,
+      nombre: 'bondiola desmechada BBQ',
+      descripcion: 'cerdo jugoso con salsa barbacoa',
+      precio: 1000,
+      imagen: '/assets/emp/bdbbq.jfif',
+      disponibilidad: true,
+      cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
+    },id: 30,
       nombre: 'pollo, champiñón y crema',
       descripcion: 'pollo y champiñones ligados con un chorrito de crema',
       precio: 1000,
       imagen: '/assets/emp/pcc.jfif',
       disponibilidad: true,
       cantidad: 5,
+      categoria:"de primera",
+      marca:"el mas grande",
     },
-   /*{
-      id: 29,
-      nombre: 'morcilla con manzana ',
-      descripcion: 'morcilla  equilibrada con manzana',
-      precio: 1000,
-      imagen: '/assets/emp/mym.jfif',
-      disponibilidad: true,
-      cantidad: 5,
-    },
-    {
-      id: 30,
-      nombre: 'dulce de leche y banana',
-      descripcion: 'dulce de leche y rodajas de banana caramelizadas',
-      precio: 1000,
-      imagen: '/assets/emp/ddlyb.avif',
-      disponibilidad: true,
-      cantidad: 5,
-    },*/
+    */
 
   ]
   //nombre y tipo parámetro. solo se puede usar en este componente
@@ -302,4 +364,55 @@ export class ProductosComponent {
     alert('producto agregado a favoritos')
     // Muestra un mensaje de confirmación al usuario    
   }
+
+
+  
+  agregar(producto: Producto) {
+    this.carritoService.agregarAlcarrito(producto)
+    alert('producto agregado al carrito') 
+  }
+
+
+  agregarAfavorito(producto: Producto) {
+    this.favoritoService.agregarAFavoritos(producto)
+    alert('producto agregado a favorito')
+  }
+
+
+  searchTerm: string ='';
+
+  selectedCategory: string ='';
+  selectedBrand: string ='';
+  minprecio: number | null = null;
+  maxprecio:number | null = null;
+
+  get categories(): string[]{
+    return [...new Set(this.productos.map(p=>p.categoria))]
+  }
+  get marca(): string[]{
+    return[...new Set(this.productos.map(p=>p.marca))]
+  }
+
+  onSearch(event:Event):void{
+    event.preventDefault();
+  }
+
+  resetFilters():void{
+    this.searchTerm = '';
+    this.selectedCategory = '';
+    this.selectedBrand = '';
+    this.minprecio = null;
+    this.maxprecio = null;
+  }
+
+  get filteredProducts():Producto[]{
+    return this.productos.filter(p => 
+    (this.searchTerm === '' || p.nombre.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
+    (this.selectedCategory === '' || p.categoria === this.selectedCategory) &&
+    (this.selectedBrand === '' || p.marca === this.selectedBrand) &&
+    (this.minprecio === null || p.precio>=this.minprecio ) &&
+    (this.maxprecio === null || p.precio <= this.maxprecio)
+    )
+  }
 }
+

@@ -3,20 +3,17 @@
 
     <!--comienza inicio-->
 <div class="loguito">
-  <a [routerLink]="['/inicio']" ><img src="/assets/logo-removebg-preview.png"></a>
+  <a [routerLink]="['/inicio']" ><img src="/assets/logo/hp.webp"></a>
 </div>
 
 
 <!--termina inicio-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
       <div class="offcanvas-body">
-        <ul class="navbar-nav flex-grow-1 justify-content-between">
+        <ul class="navbar-nav flex-grow-1 justify-content-end">
           
-          <li class="nav-item"><a class="nav-link" href="/producto">productos</a></li>
-
-          <li class="nav-item"><a class="nav-link" href="/promos">promos</a></li>
-          <li class=nav-item><a class="nav-link" [routerLink]="['/contacto']">contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="/quienessomos">sobre nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="/producto"><i class="fa-solid fa-basket-shopping"></i></a></li>
+          <li class=nav-item><a class="nav-link" [routerLink]="['/contacto']"><i class="fa-solid fa-phone"></i></a></li>
 
 
           <li class="nav-item"><a class="nav-link" [routerLink]="['/favorito']" aria-label="Cart">

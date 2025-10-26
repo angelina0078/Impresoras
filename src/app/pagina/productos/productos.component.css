@@ -98,41 +98,25 @@
   
 
   /*estrella*/
-
-  .container input {
-  position:relative;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+/* Oculta el checkbox */
+.favorito .check {
+  display: none;
 }
 
-.container {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
+/* Estilo base de la estrella */
+.favorito .estrella {
+  width: 24px;
+  height: 24px;
+  fill: #bbb; /* gris */
+  transition: fill 0.3s ease;
 }
 
-.container svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  transition: all 0.3s;
-  fill: #666;
-  align-items: start;
+/* Cuando se pasa el mouse */
+.favorito:hover .estrella {
+  fill: #f5d142; /* dorado suave */
 }
 
-.container svg:hover {
-  transform: scale(1.1);
-}
-
-.container input:checked ~ svg {
-  fill: #ffeb49;
-}
-.texto{
-  position: absolute;
-  text-align: start ;
+/* Cuando el checkbox está marcado */
+.favorito .check:checked + .estrella {
+  fill: gold; /* dorado permanente */
 }
